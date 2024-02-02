@@ -18,7 +18,7 @@ class GruposController extends Controller
         $categories = TermModel::all();
         return view('grupos.index', compact('categories'));
     }
-
+    //lala
 
     public function getGrupos(Request $request)
     {
