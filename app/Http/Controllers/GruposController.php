@@ -122,8 +122,8 @@ class GruposController extends Controller
         $locationData = json_decode($response, true);
 
         // Obtener el país
-        $pais = $locationData['country'] ?? 'gb';
-
+        $pais = $locationData['country'] ?? 'México';
+        $code = $locationData['countryCode'] ?? 'MX';
         //$grupo->is_adult = $request->input('adulto') === 'yes' ? 1 : 0; // asumiendo que tienes una columna is_adult
         $grupo->save();
 //return dd($grupo);
@@ -136,7 +136,7 @@ class GruposController extends Controller
         PostMetaModel::create([
             'post_id' => $grupo->ID,
             'meta_key' => 'cod_pais',
-            'meta_value' => $pais
+            'meta_value' => $code
         ]);
         PostMetaModel::create([
             'post_id' => $grupo->ID,
