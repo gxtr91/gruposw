@@ -48,7 +48,7 @@ class GruposController extends Controller
                       </button>
                       <div class="dropdown-menu py-0" aria-labelledby="dropdown-align-primary" style="">';
                       if ($row->post_status == 'publish' && $row->post_status != 'desactivated_user') {
-                        $acciones .= '<a data-bs-toggle="modal" data-bs-target="#modal-block-fadein-update-grupo" class="dropdown-item update-grupo" data-id="'.$row->ID.'">Editar</a>';
+                        //$acciones .= '<a data-bs-toggle="modal" data-bs-target="#modal-block-fadein-update-grupo" class="dropdown-item update-grupo" data-id="'.$row->ID.'">Editar</a>';
                       }
                       //if ($row->post_status == 'publish' && $row->post_status != 'desactivated_user') {
                         //$acciones .= '<a class="dropdown-item" href="eventos/promocionar/'.$row->id.'">Promocionar</a>';
@@ -124,6 +124,7 @@ class GruposController extends Controller
         // Obtener el país
         $pais = $locationData['country'] ?? 'México';
         $code = $locationData['countryCode'] ?? 'MX';
+        $code = strtolower($code);
         //$grupo->is_adult = $request->input('adulto') === 'yes' ? 1 : 0; // asumiendo que tienes una columna is_adult
         $grupo->save();
 //return dd($grupo);
