@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class TermModel extends Model
 {
     use HasFactory;
-    protected $table = 'gpdww_terms';
+    protected $table = 'wpxy_terms';
     protected $primaryKey = 'term_id';
 
     public function posts()
     {
-        return $this->belongsToMany(GruposModel::class, 'gpdww_term_relationships', 'term_taxonomy_id', 'object_id');
+        return $this->belongsToMany(GruposModel::class, 'wpxy_term_relationships', 'term_taxonomy_id', 'object_id');
     }
 }

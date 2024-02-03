@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WordpressUserModel extends Model
 {
     use HasFactory;
-    protected $table = 'gpdww_users';
+    protected $table = 'wpxy_users';
     protected $primaryKey = 'ID';
     public $incrementing = true;
     public $timestamps = false;

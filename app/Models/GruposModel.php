@@ -13,7 +13,7 @@ use Carbon\Carbon;
 class GruposModel extends Model
 {
     use HasFactory;
-    protected $table = 'gpdww_posts';
+    protected $table = 'wpxy_posts';
     protected $primaryKey = 'ID';
     public $incrementing = true;
     public $timestamps = false;
@@ -29,7 +29,6 @@ class GruposModel extends Model
         'to_ping',
         'pinged',
         'post_content_filtered',
-
     ];
 
     //Fecha dormato
@@ -40,7 +39,7 @@ class GruposModel extends Model
 
     public function terms()
     {
-        return $this->belongsToMany(TermModel::class, 'gpdww_term_relationships', 'object_id', 'term_taxonomy_id');
+        return $this->belongsToMany(TermModel::class, 'wpxy_term_relationships', 'object_id', 'term_taxonomy_id');
     }
 
     //SLUGS

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PostMetaModel extends Model
 {
     use HasFactory;
-    protected $table = 'gpdww_postmeta';
+    protected $table = 'wpxy_postmeta';
     protected $primaryKey = 'meta_id';
     protected $fillable = [
         'post_id',

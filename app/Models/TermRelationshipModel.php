@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class TermRelationshipModel extends Model
 {
     use HasFactory;
-    protected $table = 'gpdww_term_relationships';
+    protected $table = 'wpxy_term_relationships';
 }
